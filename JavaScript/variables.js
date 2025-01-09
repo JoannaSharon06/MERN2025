@@ -7,3 +7,6 @@ console.log(b);
 console.log(pi);
 pi=3.143
 console.log(pi);
+
+
+//output gets executed and then error arises

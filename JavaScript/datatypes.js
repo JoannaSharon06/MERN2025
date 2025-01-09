@@ -37,3 +37,22 @@ obj2.abs=1
 totalPresentCount=obj2.count-obj2.abs
 console.log(totalPresentCount)
 console.log(obj2)
+
+
+//Set
+set=new Set(("hello",1,2,"SECE"))
+console.log(set)
+
+//Empty Set 
+set1=new Set();
+console.log(set1)
+console.log(typeof(set1))
+
+//Set
+set2=new Set(["hello",1,2,"SECE"])
+console.log(set2)
+
+
+
+
+
