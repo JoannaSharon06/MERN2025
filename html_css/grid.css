@@ -1,0 +1,29 @@
+
+.grid-container{
+   display: grid; 
+   grid-template-columns: 1fr 1fr 1fr;
+   padding:20px;
+   border:2px rgb(47, 78, 255) solid;
+   background-color: rgb(27, 146, 189);
+}
+
+#grid-item
+{
+    margin:10px;
+    padding:30px;
+    width:20px;
+    height:20px;
+    background-color: rgb(0, 0, 0);
+    color:white;
+    border:1px rgb(208, 15, 15) dotted;
+}
+
+@media screen and (min-width:1600px) and (max-width:2000px){
+    .grid-container{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    padding:20px;
+    border:2px antiquewhite solid;
+    background-color: rgb(32, 211, 44);
+ }
+}
