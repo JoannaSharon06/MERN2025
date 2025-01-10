@@ -59,5 +59,17 @@ var [a,b,c,d]=array
 console.log(a,b,c);
 
 //9.Hoisting
+//1.Variable Hoisting
 console.log(f)
-var f=20
+const f=20
+console.log(g)
+const g=20
+console.log(h)
+const h=20
+
+//2.Function hoisting
+console.log(fun())
+function fun() {
+    return 10
+}
+
