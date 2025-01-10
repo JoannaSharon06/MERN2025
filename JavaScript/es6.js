@@ -57,3 +57,7 @@ restOpEg(10,20,30,40,50,...b)
 var array=[10,20,30]
 var [a,b,c,d]=array
 console.log(a,b,c);
+
+//9.Hoisting
+console.log(f)
+var f=20
