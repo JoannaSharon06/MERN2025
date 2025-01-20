@@ -1,4 +1,4 @@
-Home=()=>{
+const Home=()=>{
     return(
         <div>
             <h1>Welcome to react</h1>
@@ -7,3 +7,4 @@ Home=()=>{
 }
 
 export default Home
+
