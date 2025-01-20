@@ -1,9 +1,14 @@
-const gallery=()=>
+
+const gallery=(sece)=>
 {
    return(
-    <div>
-        <h5>Welcome to gallery Page</h5>
+   <div>
+        <h5>Welcome to {sece.page}</h5>
+        <img src="logo.jpeg" alt="SECE logo"/>
+        <h5>The image is {sece.image}</h5>
+        
     </div>
+    
    ) 
 }
 
