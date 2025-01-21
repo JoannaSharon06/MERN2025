@@ -1,0 +1,27 @@
+ul{
+    display:flex;
+    justify-content:space-around;
+    list-style-type: none;
+    margin:0;
+    padding:10px;
+    background-color:brown;
+    color: beige;
+}
+
+nav{
+    margin:0px;
+    padding:0px;
+}
+
+.link{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 3px;
+}
+
+.link:hover{
+    background-color: blanchedalmond;
+    color: rgb(241, 160, 9);
+    border-radius: 5px;
+    padding: 2px;
+}

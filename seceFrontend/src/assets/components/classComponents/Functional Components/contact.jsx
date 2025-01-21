@@ -9,7 +9,7 @@ const contact=()=>{
     }
     return(
         <div>
-            <h4>This is a contact component</h4>
+            <h4>This is a contact Page</h4>
             <h4>This is a state example</h4>
             <h4>Number is {num}</h4>
             <button onClick={()=>{handleAdd()}}>+</button>
