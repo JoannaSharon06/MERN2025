@@ -2,7 +2,7 @@ import React from 'react'
 import "../../../../css/Navbar.css";
 import {Link} from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = (onLogout) => {
  var styling={textDecoration:"underline",
   color:"blue",
   listStyletype:"none",
@@ -17,6 +17,7 @@ const Navbar = () => {
         <li><Link to='/gallery' className='link'>Gallery</Link></li>
         <li><Link to='/contact' className='link'>Contact</Link></li>
         <li><Link to='/signup' className='link'>Signup</Link></li>
+        <li><Link to="/" className="Link" onClick={onLogout}>Logout</Link></li>
       </ul>
     </nav>
     </header>

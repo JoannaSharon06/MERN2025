@@ -6,24 +6,45 @@ import Gallery from "./assets/components/classComponents/Functional Components/g
 import Contact from "./assets/components/classComponents/Functional Components/contact"
 import Navbar from "./assets/components/classComponents/Functional Components/Navbar"
 import Signup from "./assets/components/classComponents/Functional Components/Signup"
+import Login from "./assets/components/classComponents/Functional Components/Login"
+
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 import './App.css'
 
 function App() {
+  const [login, setLogin] = useState(false);
+
+  const handleLogin = () => {
+    setLogin(true); 
+  };
+
+  const handleLogout = () => {
+    setLogin(false);
+  };
+
+
+ 
   return (
     
     
     <BrowserRouter>
-    <Navbar/>
-    
+      {login && <Navbar onLogout = {handleLogout}/>}
       <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/about' element={<About />} />
-        <Route path='/gallery' element={<Gallery image="Sece Logo" page="Gallery Page" />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/signup' element={<Signup />} />
-        </Routes>
+        {!login ? (
+          <>
+            <Route path="/" element={<Signup onLogin={handleLogin} />} />
+            <Route path="/login" element={<Login onLogin={handleLogin} />} />
+          </>
+        ) : (
+          <>
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery image="chocolate" page="gallery" />} />
+            <Route path="/contact" element={<Contact />} />
+          </>
+        )}
+      </Routes>
     </BrowserRouter>
     
   )
