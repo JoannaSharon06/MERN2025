@@ -10,25 +10,26 @@ const Navbar = (onLogout) => {
   return (
     <header>
     <nav>
-      <ul>
+      <ol>
         <li><Link to='/' className='link'>Home</Link></li>
         <li><Link to='/about' className='link'>About</Link></li>
         <li><Link to='/gallery' className='link'>Gallery</Link></li>
         <li><Link to='/contact' className='link'>Contact</Link></li>
-        <div onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+        <div onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown} className='drop'>
         <span >Hooks</span>
           {dropdown && (
           
-          <ul>
+          <ul classname="dropdown">
             <li><Link to='usestate' className='link' >useState</Link></li>
             <li><Link to='useeffect' className='link' >useEffect</Link></li>
             <li><Link to='useapi' className='link' >useEffectAPI</Link></li>
-
+            <li><Link to='usereducer' className='link' >useReducer</Link></li>
+            <li><Link to='useeffectimg' className='link' >useEffectAPIImage</Link></li>
           </ul>)}
         </div>
         <li><Link to='/signup' className='link'>Signup</Link></li>
         <li><Link to="/" className="Link" onClick={onLogout}>Logout</Link></li>
-      </ul>
+      </ol>
     </nav>
     </header>
   )

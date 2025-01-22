@@ -10,6 +10,9 @@ import Login from "./assets/components/classComponents/Functional Components/Log
 import UseState from "./assets/components/classComponents/Functional Components/Hooks/UseState"
 import UseEffect from "./assets/components/classComponents/Functional Components/Hooks/UseEffect"
 import UseEffectAPI from "./assets/components/classComponents/Functional Components/Hooks/UseEffectAPI"
+import UseReducer from "./assets/components/classComponents/Functional Components/Hooks/UseReducer"
+import UseEffectAPIImage from "./assets/components/classComponents/Functional Components/Hooks/UseEffectAPIImage"
+
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 import './App.css'
@@ -47,6 +50,9 @@ function App() {
             <Route path="/usestate" element={<UseState />} />
             <Route path="/useeffect" element={<UseEffect />} />
             <Route path="/useapi" element={<UseEffectAPI />} />
+            <Route path="/usereducer" element={<UseReducer />} />
+            <Route path="/useeffectimg" element={<UseEffectAPIImage />} />
+
           </>
         )}
       </Routes>
