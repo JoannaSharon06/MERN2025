@@ -8,10 +8,16 @@ ul{
     color: beige;
 }
 
-nav{
-    margin:0px;
-    padding:0px;
+
+
+span{
+    position: absolute;
+    position: relative;
+    color: aliceblue;
+    background-color: brown;
+    
 }
+
 
 .link{
     text-decoration: none;
