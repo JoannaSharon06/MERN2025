@@ -5,30 +5,8 @@ ol{
     margin:0;
     padding:0;
     background-color:brown;
-    color: beige;
+    color: black;
 }
-.drop {
-    position: relative;
-    display: inline-block;
-  }
-.dropdown
-{
-    position: absolute;
-}
-.dropdown li {
-    padding: 10px;
-    text-align: left;
-  }
-
-  .dropdown li .link {
-    color: brown;
-  }
-  
-  .dropdown li .link:hover {
-    background-color: brown;
-    color: beige;
-    border-radius: 5px;
-  }
 
 span{
     position: absolute;
@@ -42,7 +20,7 @@ span{
     position: relative;
     top: 100%;
     left: 0;
-    background-color: white;
+    background-color: rgb(232, 123, 123);
     border: 1px solid #ccc;
     border-radius: 5px;
     list-style-type: none;
@@ -51,6 +29,11 @@ span{
     width: 150px;
     z-index: 10;
 }
+
+.div ul link{
+  color: black;
+}
+
 .link{
     text-decoration: none;
     color: aliceblue;
