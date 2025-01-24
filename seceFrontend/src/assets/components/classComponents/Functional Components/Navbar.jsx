@@ -32,6 +32,7 @@ const Navbar = (onLogout) => {
                                 borderRadius: '5px',
                                 zIndex: 1,
                             }}>
+                                <li><Link to='reactlm' className='link'>ReactLM</Link></li>
                                 <li><Link to='/usestate' className='link'>useState</Link></li>
                                 <li><Link to='/useeffect' className='link'>useEffect</Link></li>
                                 <li><Link to='useapi' className='link'>useApi</Link></li>
@@ -40,6 +41,7 @@ const Navbar = (onLogout) => {
                                 <li><Link to='useref' className='link'>useRef</Link></li>
                                 <li><Link to='usememo' className='link'>useMemo</Link></li>
                                 <li><Link to='usecallback' className='link'>useCallback</Link></li>
+                                <li><Link to='reactlm' className='link'>ReactLM</Link></li>
                                
 
 

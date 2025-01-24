@@ -15,6 +15,7 @@ import UseEffectAPIImage from "./assets/components/classComponents/Functional Co
 import UseRef from "./assets/components/classComponents/Functional Components/Hooks/UseRef"
 import UseMemo from "./assets/components/classComponents/Functional Components/Hooks/UseMemo"
 import UseCallback from "./assets/components/classComponents/Functional Components/Hooks/UseCallback"
+import ReactLifeCycleMethods from "./assets/components/classComponents/ReactLifeCycleMethods"
 
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
@@ -59,6 +60,7 @@ function App() {
             <Route path="/useref" element={<UseRef />} />
             <Route path="/usememo" element={<UseMemo />} />
             <Route path="/usecallback" element={<UseCallback />} />
+            <Route path="/reactlm" element={<ReactLifeCycleMethods />} />
 
 
           </>
