@@ -41,13 +41,12 @@ const Navbar = (onLogout) => {
                                 <li><Link to='useref' className='link'>useRef</Link></li>
                                 <li><Link to='usememo' className='link'>useMemo</Link></li>
                                 <li><Link to='usecallback' className='link'>useCallback</Link></li>
-                                <li><Link to='reactlm' className='link'>ReactLM</Link></li>
-                               
-
-
+                                <li><Link to='usecontext' className='link'>useContext</Link></li>
+                                
                             </ul>
                         )}
                     </div>
+                    <li><Link to='/memo' className='link'>React.memo</Link></li>
         <li><Link to='/signup' className='link'>Signup</Link></li>
         <li><Link to="/" className="Link" onClick={onLogout}>Logout</Link></li>
       </ol>
