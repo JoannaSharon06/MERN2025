@@ -43,10 +43,34 @@ const Navbar = (onLogout) => {
                                 <li><Link to='usecallback' className='link'>useCallback</Link></li>
                                 <li><Link to='usecontext' className='link'>useContext</Link></li>
                                 
-                            </ul>
+                          </ul>
                         )}
                     </div>
-                    <li><Link to='/memo' className='link'>React.memo</Link></li>
+                    <div onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown} style={{ position: 'relative', display: 'inline-block' }}>
+                        <span>Memoisation</span>
+                        {dropdown && (
+                            <ul style={{
+                                position: 'absolute',
+                                top: '100%',
+                                left: 0,
+                                listStyle: 'none',
+                                margin: 0,
+                                padding: '10px',
+                                color:'black',
+
+                                backgroundColor: 'brown',
+                                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                                borderRadius: '5px',
+                                zIndex: 1,
+                            }}>
+                                <li><Link to='/memo' className='link'>Memo</Link></li>
+                                <li><Link to='/updatenumber' className='link'>updatenumber</Link></li>
+                                <li><Link to='/updatetext' className='link'>updatetext</Link></li>
+                                
+                          </ul>
+                        )}
+                    </div>
+                    
         <li><Link to='/signup' className='link'>Signup</Link></li>
         <li><Link to="/" className="Link" onClick={onLogout}>Logout</Link></li>
       </ol>

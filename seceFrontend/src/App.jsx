@@ -17,11 +17,11 @@ import UseMemo from "./assets/components/classComponents/Functional Components/H
 import UseCallback from "./assets/components/classComponents/Functional Components/Hooks/UseCallback"
 import UseContext from "./assets/components/classComponents/Functional Components/Hooks/UseContext"
 import Memo from "./assets/components/classComponents/Functional Components/Memoization/Memo"
-
+import UpdateNumber from "./assets/components/classComponents/Functional Components/Memoization/UpdateNumber"
+import UpdateText from "./assets/components/classComponents/Functional Components/Memoization/UpdateText"
 import ReactLifeCycleMethods from "./assets/components/classComponents/ReactLifeCycleMethods"
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
-import './App.css'
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -64,6 +64,10 @@ function App() {
             <Route path="/usecontext" element={<UseContext />} />
             <Route path="/reactlm" element={<ReactLifeCycleMethods />} />
             <Route path="/memo" element={<Memo />} />
+            <Route path="/updatenumber" element={<UpdateNumber />} />
+            <Route path="/updatenumber" element={<UpdateText />} />
+
+            
 
 
           </>
