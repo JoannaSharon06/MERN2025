@@ -16,7 +16,9 @@ import UseRef from "./assets/components/classComponents/Functional Components/Ho
 import UseMemo from "./assets/components/classComponents/Functional Components/Hooks/UseMemo"
 import UseCallback from "./assets/components/classComponents/Functional Components/Hooks/UseCallback"
 import UseContext from "./assets/components/classComponents/Functional Components/Hooks/UseContext"
+import UseLocalStorage from "./assets/components/classComponents/Functional Components/Hooks/UseLocalStorage"
 import Memo from "./assets/components/classComponents/Functional Components/Memoization/Memo"
+import Lazy from "./assets/components/classComponents/Functional Components/Memoization/LazyLoadingWithSuspense"
 import UpdateNumber from "./assets/components/classComponents/Functional Components/Memoization/UpdateNumber"
 import UpdateText from "./assets/components/classComponents/Functional Components/Memoization/UpdateText"
 import ReactLifeCycleMethods from "./assets/components/classComponents/ReactLifeCycleMethods"
@@ -62,14 +64,12 @@ function App() {
             <Route path="/usememo" element={<UseMemo />} />
             <Route path="/usecallback" element={<UseCallback />} />
             <Route path="/usecontext" element={<UseContext />} />
+            <Route path="/uselocal" element={<UseLocalStorage />} />
             <Route path="/reactlm" element={<ReactLifeCycleMethods />} />
             <Route path="/memo" element={<Memo />} />
+            <Route path="/lazy" element={<Lazy />} />
             <Route path="/updatenumber" element={<UpdateNumber />} />
             <Route path="/updatenumber" element={<UpdateText />} />
-
-            
-
-
           </>
         )}
       </Routes>

@@ -42,6 +42,7 @@ const Navbar = (onLogout) => {
                                 <li><Link to='usememo' className='link'>useMemo</Link></li>
                                 <li><Link to='usecallback' className='link'>useCallback</Link></li>
                                 <li><Link to='usecontext' className='link'>useContext</Link></li>
+                                <li><Link to='uselocal' className='link'>useLocalStorage</Link></li>
                                 
                           </ul>
                         )}
@@ -66,6 +67,7 @@ const Navbar = (onLogout) => {
                                 <li><Link to='/memo' className='link'>Memo</Link></li>
                                 <li><Link to='/updatenumber' className='link'>updatenumber</Link></li>
                                 <li><Link to='/updatetext' className='link'>updatetext</Link></li>
+                                <li><Link to='/lazy' className='link'>Lazy</Link></li>
                                 
                           </ul>
                         )}
