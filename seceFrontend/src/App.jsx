@@ -22,6 +22,8 @@ import Lazy from "./assets/components/classComponents/Functional Components/Memo
 import UpdateNumber from "./assets/components/classComponents/Functional Components/Memoization/UpdateNumber"
 import UpdateText from "./assets/components/classComponents/Functional Components/Memoization/UpdateText"
 import ReactLifeCycleMethods from "./assets/components/classComponents/ReactLifeCycleMethods"
+import HoC from "./assets/components/classComponents/Functional Components/HoC/HoC"
+
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 
@@ -70,6 +72,7 @@ function App() {
             <Route path="/lazy" element={<Lazy />} />
             <Route path="/updatenumber" element={<UpdateNumber />} />
             <Route path="/updatenumber" element={<UpdateText />} />
+            <Route path="/hoc" element={<HoC />} />
           </>
         )}
       </Routes>
