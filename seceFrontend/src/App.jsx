@@ -23,6 +23,7 @@ import UpdateNumber from "./assets/components/classComponents/Functional Compone
 import UpdateText from "./assets/components/classComponents/Functional Components/Memoization/UpdateText"
 import ReactLifeCycleMethods from "./assets/components/classComponents/ReactLifeCycleMethods"
 import HoC from "./assets/components/classComponents/Functional Components/HoC/HoC"
+import Toggle from "./assets/components/classComponents/Functional Components/Hooks/CustomHooks/Toggle"
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
@@ -73,6 +74,7 @@ function App() {
             <Route path="/updatenumber" element={<UpdateNumber />} />
             <Route path="/updatenumber" element={<UpdateText />} />
             <Route path="/hoc" element={<HoC />} />
+            <Route path="/toggle" element={<Toggle />} />
           </>
         )}
       </Routes>
