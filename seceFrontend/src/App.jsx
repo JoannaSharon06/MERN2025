@@ -5,7 +5,7 @@ import ClassComponents from "./assets/components/classComponents/ClassCompEg"
 import Gallery from "./assets/components/classComponents/Functional Components/gallery"
 import Contact from "./assets/components/classComponents/Functional Components/contact"
 import Navbar from "./assets/components/classComponents/Functional Components/Navbar"
-import Signup from "./assets/components/classComponents/Functional Components/Signup"
+import Signup from "./assets/components/Signup"
 import Login from "./assets/components/classComponents/Functional Components/Login"
 import UseState from "./assets/components/classComponents/Functional Components/Hooks/UseState"
 import UseEffect from "./assets/components/classComponents/Functional Components/Hooks/UseEffect"
@@ -23,7 +23,6 @@ import UpdateNumber from "./assets/components/classComponents/Functional Compone
 import UpdateText from "./assets/components/classComponents/Functional Components/Memoization/UpdateText"
 import ReactLifeCycleMethods from "./assets/components/classComponents/ReactLifeCycleMethods"
 import HoC from "./assets/components/classComponents/Functional Components/HoC/HoC"
-import Toggle from "./assets/components/classComponents/Functional Components/Hooks/CustomHooks/Toggle"
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
@@ -58,6 +57,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery image="chocolate" page="gallery" />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/usestate" element={<UseState />} />
             <Route path="/useeffect" element={<UseEffect />} />
             <Route path="/useapi" element={<UseEffectAPI />} />
@@ -74,7 +74,6 @@ function App() {
             <Route path="/updatenumber" element={<UpdateNumber />} />
             <Route path="/updatenumber" element={<UpdateText />} />
             <Route path="/hoc" element={<HoC />} />
-            <Route path="/toggle" element={<Toggle />} />
           </>
         )}
       </Routes>

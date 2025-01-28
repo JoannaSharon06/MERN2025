@@ -69,14 +69,15 @@ const Navbar = (onLogout) => {
                                 <li><Link to='/updatetext' className='link'>updatetext</Link></li>
                                 <li><Link to='/lazy' className='link'>Lazy</Link></li>
                                 <li><Link to='/hoc' className='link'>HoC</Link></li>
-                                <li><Link to='/toggle' className='link'>Toggle</Link></li>
+                               
                                 
                           </ul>
                         )}
+                        
                     </div>
                     
-        <li><Link to='/signup' className='link'>Signup</Link></li>
-        <li><Link to="/" className="Link" onClick={onLogout}>Logout</Link></li>
+        
+        <li><Link to="/" className="link" onClick={onLogout}>Logout</Link></li>
       </ol>
     </nav>
     </header>
