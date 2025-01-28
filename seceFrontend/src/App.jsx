@@ -50,17 +50,21 @@ function App() {
           <>
             <Route path="/" element={<Signup onLogin={handleLogin} />} />
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
-          </>
-        ) : (
-          <>
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery image="chocolate" page="gallery" />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/usestate" element={<UseState />} />
+          </>
+        ) : (
+          <>
+            
+            
+     
+            
             <Route path="/useeffect" element={<UseEffect />} />
-            <Route path="/useapi" element={<UseEffectAPI />} />
+            <Route path="/useapi" element={<UseEf1fectAPI />} />
             <Route path="/usereducer" element={<UseReducer />} />
             <Route path="/useeffectimg" element={<UseEffectAPIImage />} />
             <Route path="/useref" element={<UseRef />} />
