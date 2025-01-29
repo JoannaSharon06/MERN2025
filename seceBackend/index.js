@@ -3,9 +3,12 @@ const path = require('path');
 const mdb = require('mongoose');
 const dotenv = require('dotenv');
 const Signup = require("./models/signupSchema");
+const bcrypt = require('bcrypt');
+const cors = require('cors');
+const jwt = require('jsonwebtoken');
 const app = express();
 dotenv.config();
-
+app.use(cors())
 app.use(express.json());
 
 mdb.connect(process.env.MONGODB_URL)
@@ -15,7 +18,20 @@ mdb.connect(process.env.MONGODB_URL)
   .catch((err) => {
     console.log("MongoDb connection unsuccessful", err);
   });
-
+const verifyToken=(req,res,next)=>{
+  console.log("Middleware is triggered")
+  var token=req.headers.authorization
+  if(!token) {res.send("Request Denied");}
+ try {
+  const user = jwt.verify(token,process.env.SECRET_KEY)
+  console.log(user)
+  req.user = user
+ } catch (error) {
+  console.log(error)
+  res.send("Error in Token")
+ }
+  next()
+}
 app.get('/', (req, res) => {
   res.send("Welcome to Backend friends");
 });
@@ -24,9 +40,14 @@ app.get('/static', (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-
-app.post('/signup', (req, res) => {
+app.get('/json',verifyToken,(req, res) => {
+  console.log("Inside Json route")
+  res.json({message:"This is a middleware check",user:req.user.username})
+})
+app.post('/signup', async(req, res) => {
   var { firstname, lastname, username, email, password } = req.body;
+  var hashedPassword=await bcrypt.hash(password,15);
+  console.log(hashedPassword)
   try {
     console.log("inside try");
     const newCustomer = new Signup({
@@ -34,12 +55,12 @@ app.post('/signup', (req, res) => {
       lastname: lastname,
       username: username,
       email: email,
-      password: password,
+      password: hashedPassword,
     });
 
     console.log(newCustomer);
     newCustomer.save();
-    res.status(201).send("Signup successful");
+    res.status(201).json({response:"Signup successful",signupStatus:true});
   } catch (err) {
     res.status(400).send("Signup unsuccessful", err);
   }
@@ -52,13 +73,19 @@ app.post('/login', async (req, res) => {
   try {
     const user = await Signup.findOne({ email: email });
     if (!user) {
-      return res.status(404).send("User not found");
+     
+      return res.status(404).send({response:"User not found",loginStatus:false});
     }
+    const payload={
+      email:user.email,
+      username:user.username
+    }
+    const token=jwt.sign(payload,process.env.SECRET_KEY,{expiresIn:"1hr"})
 
-    if (user.password === password) {
-      res.status(200).send("Login successful");
+    if (bcrypt.compare(user.password , password)) {
+      res.status(200).send({response:"Login successful",loginStatus:true,token:token});
     } else {
-      res.status(401).send("Incorrect password");
+      res.status(401).send({response:"Incorrect password",loginStatus:false});
     }
   } catch (err) {
     res.status(500).send("Error during login");
